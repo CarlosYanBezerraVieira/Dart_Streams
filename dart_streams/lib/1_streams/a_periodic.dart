@@ -8,6 +8,6 @@ Future<void> main(List<String> args) async {
   print("fim");
 }
 
-int callback(int segundos) {
-  return segundos + 1;
+int callback(int valor) {
+  return valor + 1;
 }

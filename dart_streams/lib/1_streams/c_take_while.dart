@@ -2,6 +2,7 @@ Future<void> main(List<String> args) async {
   print("inicio");
   final interval = Duration(seconds: 1);
   var stream = Stream<int>.periodic(interval, callback);
+  //continua rodando até que condição seja falsa
   stream = stream.takeWhile((int numero) {
     print("numero que chego no take while $numero");
     return numero < 10;

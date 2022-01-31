@@ -2,6 +2,7 @@ Future<void> main(List<String> args) async {
   print("inicio");
   final interval = Duration(seconds: 1);
   var stream = Stream<int>.periodic(interval, callback);
+  //pula todos elementos que não atendem a condição
   stream = stream.take(5).skipWhile((numero) {
     print("numero que chego na skipeWhile  : $numero");
     return numero < 5;
